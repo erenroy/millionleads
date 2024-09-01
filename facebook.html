@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+<!-- Viewport Meta Tag for Responsive Design -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta Title -->
+<title>MillionLeads - Premium Lead Generation for Businesses, Freelancers, and Agencies</title>
+
+<!-- Meta Description -->
+<meta name="description" content="MillionLeads offers high-quality lead generation services for businesses, freelancers, and agencies. Get targeted leads and grow your business with our premium lead generation solutions.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="lead generation, business leads, freelancer leads, agency leads, lead generation services, targeted leads, premium leads">
+
+<!-- Meta Robots -->
+<meta name="robots" content="index, follow">
+<link rel="icon" href="fav.png" type="image/x-icon">
+<!-- Open Graph Meta Tags for Social Media -->
+<meta property="og:title" content="MillionLeads - Premium Lead Generation">
+<meta property="og:description" content="Discover top-quality lead generation services for businesses, freelancers, and agencies. Boost your growth with targeted leads from MillionLeads.">
+<meta property="og:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with your image URL -->
+<meta property="og:url" content="https://www.millionleads.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MillionLeads - Premium Lead Generation">
+<meta name="twitter:description" content="Find the best lead generation services for businesses, freelancers, and agencies. Increase your opportunities with MillionLeads.">
+<meta name="twitter:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with your image URL -->
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.millionleads.com">
+<title>MillionLeads - Best platofrm to provide leads for your Buisness </title>
+
+	<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="footer.css">
+</head>
+<style>
+	.main {
+		padding-top: 0rem;
+	}
+
+	.premium {
+    color: gold;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.locked {
+    padding-right: 20px;
+}
+
+.locked::after {
+    content: "\1F512"; /* Unicode for lock emoji */
+    position: absolute;
+    right: 0;
+    color: red;
+}
+
+.premium[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.results-container {
+    overflow-x: auto;
+    max-width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #333;
+}
+
+thead {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin: 20px 0; /* Space above and below the button container */
+}
+
+.copy-button, .download-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.copy-button:hover {
+    background-color: #0056b3;
+}
+
+.download-button {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.download-button:hover {
+    background-color: #117a8b;
+}
+
+/* For notification  */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    pointer-events: none; /* Ensure it doesn't block other interactions */
+}
+
+.notification {
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+    color: #fff; /* White text */
+    padding: 15px 25px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-20px); /* Slide in effect */
+    pointer-events: all; /* Allow interaction with the notification */
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.notification.hide {
+    animation: fadeOut 0.5s forwards;
+}
+
+
+</style>
+<link rel="stylesheet" href="loader.css">
+<body>
+	<!-- partial:index.partial.html -->
+	<header class="header">
+		<div class="header-content responsive-wrapper">
+			<div class="header-logo">
+				<a href="index.html">
+					<div>
+						<!-- <img src="img/logo1.png" /> -->
+					</div>
+					<img src="img/logo6.png" />
+				</a>
+			</div>
+			<div class="header-navigation">
+				<nav class="header-navigation-links">
+					<a href="index.html"> Home </a>
+					<a href="about.html"> About Us </a>
+					<a href="features.html"> Features </a>
+					<a href="bloghow.html"> Blogs </a>
+					<a href="index.html"> Leads </a>
+					<a href="pricing.html"> Pricing </a>
+				</nav>
+				<div class="header-navigation-actions">
+					<a href="pricing.html" class="button">
+						<i class="ph-lightning-bold"></i>
+						<span>Upgrade now</span>
+					</a>
+					<a href="#" class="icon-button">
+						<i class="ph-gear-bold"></i>
+					</a>
+					<a href="#" class="icon-button">
+						<i class="ph-bell-bold"></i>
+					</a>
+					<a href="#" class="avatar">
+						<img src="https://uifaces.co/our-content/donated/gPZwCbdS.jpg" alt="" />
+					</a>
+				</div>
+			</div>
+			<a href="#" class="button">
+				<i class="ph-list-bold"></i>
+				<span>Menu</span>
+			</a>
+		</div>
+	</header>
+
+
+	
+	<div class="loader-overlay" id="loader-overlay">
+		<div class="loader-container">
+			<div class="loader">
+				<div class="dot dot1"></div>
+				<div class="dot dot2"></div>
+				<div class="dot dot3"></div>
+			</div>
+			<p class="loader-text" style="color: white;">Searching online: 50 different API's</p>
+		</div>
+	</div>
+	<main class="main">
+		<div class="responsive-wrapper">
+
+			<!-- <div class="horizontal-tabs">
+			<a href="#">My details</a>
+			<a href="#">Profile</a>
+			<a href="#">Password</a>
+			<a href="#">Team</a>
+			<a href="#">Plan</a>
+			<a href="#">Billing</a>
+			<a href="#">Email</a>
+			<a href="#">Notifications</a>
+			<a href="#" class="active">Integrations</a>
+			<a href="#">API</a>
+		</div> -->
+			<div class="content-header">
+				<div class="content-header-intro">
+					<h2>Facebook Lead Generator – Generate Leads through facebook</h2>
+					<p>Generate Millions of Leads Daily with Over 50 Customizable Web Data Fetching APIs! and millions
+						of active Data </p>
+				</div>
+				<div class="content-header-actions">
+					<a href="#" class="button">
+						<i class="ph-faders-bold"></i>
+						<span>Filters</span>
+					</a>
+					<a href="#" class="button">
+						<i class="ph-plus-bold"></i>
+						<span>Facebook Leads Collect</span>
+					</a>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content-panel">
+					<div class="vertical-tabs">
+						<a href="index.html" >Google Lead Search </a>
+						<a href="facebook.html" class="active">Facebook Leads</a>
+						<a href="instagram.html" >Websearh Leads</a>
+						<a href="#" class="premium locked" title="Locked">LinkedIn Leads</a>
+						<a href="#" class="premium locked" title="Locked">Pinterest Leads</a>
+						<a href="#" class="premium locked" title="Locked">TikTok Leads</a>
+						<a href="#" class="premium locked" title="Locked">Snapchat Leads</a>
+						<a href="#" class="premium locked" title="Locked">Reddit Leads</a>	
+
+						<a  class="active">Our Service - MillionLead </a>
+						<ul style="line-height: 1.8; font-family: 'Helvetica Neue', Arial, sans-serif; margin: 2px; margin-top: 5px; padding: 20px; border: 2px solid #007BFF; border-radius: 10px; background-color: #F0F8FF; box-shadow: 0 4px 12px rgba(0,0,0,0.1); list-style-type: disc;">
+							<li><strong>Welcome to MillionLeads</strong>, your premier destination for generating high-quality leads that drive your business forward.</li>
+							<li>At MillionLeads, we harness the power of cutting-edge technology and innovative strategies to deliver unparalleled lead generation services.</li>
+							<li>Our dedicated team is committed to helping you connect with potential clients, expand your reach, and achieve your growth targets.</li>
+							<li>Whether you're a startup looking to build a customer base or an established company aiming to scale, MillionLeads provides the expertise and resources you need to succeed.</li>
+							<li>Join us and discover how we can transform your lead generation process, turning opportunities into results.</li>
+						</ul>
+						
+						
+					</div>
+					
+				</div>
+				<div class="content-main">
+
+					<div id="message" style="display: none; text-align: center; margin-top: 20px;">
+						<p style="font-size: 18px; color: #333;">The lead generation process has started. Reload the page to generate leads again.</p>
+						<button style="
+						background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+						color: #fff; /* White text color */
+						border: none; /* Remove default border */
+						padding: 12px 24px; /* Padding inside the button */
+						border-radius: 8px; /* Rounded corners */
+						cursor: pointer; /* Pointer cursor on hover */
+						font-size: 18px; /* Larger font size */
+						font-weight: bold; /* Bold text */
+						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+						transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
+						margin-top: 20px; /* Space above the button */
+						display: inline-block; /* Align with other inline elements */
+						text-align: center; /* Center text */
+						text-decoration: none; /* Remove underline from text */
+						text-transform: uppercase; /* Uppercase text */
+						overflow: hidden; /* Hide overflow */
+						outline: none; /* Remove default outline */
+					" 
+					onclick="reloadPageMultipleTimes()"
+					onmouseover="this.style.background='linear-gradient(135deg, #a777e3, #6e8efb)'; this.style.transform='scale(1.05)';"
+					onmouseout="this.style.background='linear-gradient(135deg, #6e8efb, #a777e3)'; this.style.transform='scale(1)';">
+						Generate Lead Again
+					</button>
+					  </div>
+					  
+					<form id="leadForm"
+						style=" max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+						<!-- <h2 style="text-align: center; color: #333;">Lead Generator</h2> -->
+						<div style="display: flex; justify-content: center; align-items: center; ">
+							<img src="img/logo6.png" alt="" style="max-width: 100%; max-height: 100%;">
+						</div>
+						
+						<div style="margin-bottom: 15px;">
+							<label for="numLeads"  style="display: block; font-weight: bold; margin-bottom: 5px;">Number
+								of Leads:</label>
+							<input type="number" id="numLeads" min="1" max="100" placeholder="Enter number of leads"
+								style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ddd; font-size: 16px;"
+								required>
+							<label for="numLeads"
+								style="display: block; margin-top: 10px; font-weight: bold; margin-bottom: 5px;">Your
+								target audiance : ( recommended for better result ) </label>
+							<input type="text" id="numLeads" min="1" max="100"
+								placeholder="Enter description of audiance you are targetting "
+								style="width: 100%; padding: 10px; border-radius: 4px; height: 80px; border: 1px solid #ddd; font-size: 16px;"
+								required>
+							<label for="numLeads"
+								style="display: block; margin-top: 10px; font-weight: bold; margin-bottom: 5px;">Keywords
+								related Leads you are searching : ( Optional )  </label>
+							<input type="text" id="numLeads" min="1" max="100" placeholder="Enter 2 to 5 keywords"
+								style="width: 100%; padding: 10px; border-radius: 4px; height: 20px; border: 1px solid #ddd; font-size: 16px;"
+								required>
+
+
+						</div>
+						<div style="text-align: center;">
+							<button type="button" id="loader-button" onclick="generateLeads()"
+								style="  background: linear-gradient(135deg, #6e8efb, #a777e3); color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px;">Generate
+								Leads</button>
+						</div>
+					</form>
+
+
+	
+					<div id="results" class="container" style="
+					margin-top: 20px;
+						max-width: 800px;
+						margin: auto;
+						padding: 20px;
+						border: 1px solid #e0e0e0;
+						border-radius: 10px;
+						box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+						background: #fff;
+						overflow-x: auto;
+					"></div>
+<!-- Button container -->
+<div class="button-container">
+	<button id="copyButton" class="copy-button" onclick="copyTableToClipboard()">Copy to Clipboard</button>
+	<button id="downloadButton" class="download-button" onclick="downloadTableAsCSV()">Download CSV</button>
+	<button id="downloadTextButton" class="download-button" onclick="downloadTableAsText()">Download Text</button>
+</div>
+					<h1 style="text-align: center; margin-top: 40px; font-size: 1.6rem;">Customize your data fetching
+						thgrough our api </h1>
+						<div id="notification-container"></div>
+
+					<div class="card-grid" style="margin-top: 50px;">
+    
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/2.png" alt="Zeplin" /></span>
+									<h3>Google Search</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="Google Search ">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable to Generate Leads through goggle support</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/3.png"  alt="GitHub" /></span>
+									<h3>Web Apis</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="Web Api's">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Fetches data from more than 100 real world web apis </p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/1.png"  alt="Figma" /></span>
+									<h3>International Leads</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="International Lead Search">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable to get data from All over the world</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/4.png"  alt="Zapier" /></span>
+									<h3>Chatgpt Filter</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="Chatgpt Filter">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable to get more control and precision over api search</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/5.png"  alt="Notion" /></span>
+									<h3>Website search</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="Website search">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Searches leads from millions of available websites online.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item = Expander </h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/6.png"  alt="Slack" /></span>
+									<h3>Expand search</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Expand to get thousands of results in seconds </p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item - Checker</h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/7.png"  alt="Slack" /></span>
+									<h3>Check Errors</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>leads before collecting </p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item - Enable faster </h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/8.png"  alt="Slack" /></span>
+									<h3>Fast </h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable faster and better response</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item - Analyser</h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/9.png"  alt="Slack" /></span>
+									<h3>Analyser</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Analyse all the leads collect from online.</p>
+
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						
+						<!-- <article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="https://assets.codepen.io/285131/google-chrome.svg" /></span>
+									<h3>Google Chrome</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Link your Google account to share bookmarks across your entire team.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="https://assets.codepen.io/285131/discord.svg" /></span>
+									<h3>Discord</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Keep in touch with your customers without leaving the app.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="https://assets.codepen.io/285131/google-drive.svg" /></span>
+									<h3>Google Drive</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Link your Google account to share files across your entire team.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>  -->
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Starting of blog here  -->
+<h1 style="text-align: center; font-size: 1.8rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Read Our recent Blogs</h1>
+
+<div id="blog-new" style="display: flex; justify-content: space-between; margin: 20px; gap: 20px;">
+    <div style="flex: 1; border: none; border-radius: 15px; padding: 0; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+		<a style="text-decoration: none;" href="bloghow.html">  <img src="img/features/blog3.jpg" alt="Blog 1" style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s ease;">
+        <div style="padding: 20px;">
+            <h2 style="font-family: 'Helvetica Neue', Arial, sans-serif; color: #007BFF; margin-top: 10px;">How do you use millionLeads website to generate leads ?</h2>
+			<p style="font-family: Arial, sans-serif; color: #333;">MillionLeads uses advanced algorithms to identify high-quality prospects, ensuring you connect with potential clients most likely to convert.</p>
+            <p style="font-family: Arial, sans-serif; color: #777; font-size: 0.9em;">Uploaded on July 20, 2021 by Roy</p>
+        </div></a> 
+    </div>
+    <div style="flex: 1; border: none; border-radius: 15px; padding: 0; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <a style="text-decoration: none;" href="blogservice.html">   <img src="img/features/blog2.jpg" alt="Blog 2" style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s ease;">
+        <div style="padding: 20px;">
+            <h2 style="font-family: 'Helvetica Neue', Arial, sans-serif; color: #007BFF; margin-top: 10px;">What are the Services of MillionLeads ?</h2>
+			<p style="font-family: Arial, sans-serif; color: #333;">MillionLeads provides tailored lead generation and nurturing using advanced analytics, along with CRM integration to enhance your sales process.</p>
+            <p style="font-family: Arial, sans-serif; color: #777; font-size: 0.9em;">Uploaded on July 19, 2022 by Roy</p>
+        </div></a> 
+    </div>
+    <div style="flex: 1; border: none; border-radius: 15px; padding: 0; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+     <a  style="text-decoration: none;" href="bloggrow.html">  <img src="img/features/blog1.jpg" alt="Blog 3" style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s ease;">
+        <div style="padding: 20px;">
+            <h2 style="font-family: 'Helvetica Neue', Arial, sans-serif; color: #007BFF; margin-top: 10px;">Can i grow my buisness with millionLeads ?</h2>
+			<p style="font-family: Arial, sans-serif; color: #333;">Yes, MillionLeads can help grow your business by connecting you with high-quality leads and optimizing your sales process.</p>
+
+            <p style="font-family: Arial, sans-serif; color: #777; font-size: 0.9em;">Uploaded on July 18, 2022 by Roy</p>
+        </div> </a> 
+    </div>
+</div>
+
+
+<style>
+    div[style*="box-shadow: 0 6px 20px rgba(0,0,0,0.1);"] img:hover {
+        transform: scale(1.05);
+    }
+
+    div[style*="box-shadow: 0 6px 20px rgba(0,0,0,0.1);"]:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+	@media (max-width: 1024px) {
+        #blog-new{
+			display: block;
+		}
+    }
+</style>
+
+			
+			<!-- Ending of blog here  -->
+
+		</div>
+        <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="footer-col">
+                  <h4>MillionLeads</h4>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="features.html">Our Features</a></li>
+                    <li><a href="index.html">Generate Leads</a></li>
+                    <li><a href="pricing.html">Pricing and Plans</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Our Contact Info </h4>
+                  <ul>
+                    <li><a href="#">developerroyhub@gmail.com</a></li>
+                    <li><a href="https://www.developerroy.online/">Website - developerroy.online</a></li>
+                    <li><a href="#">millionLeads</a></li>
+                    <li><a href="#">Order Services</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Our Services</h4>
+                  <ul>
+                    <li><a href="index.html">Google Search</a></li>
+                    <li><a href="facebook.html">Facebook Search</a></li>
+                    <li><a href="instagram.html">Website Search</a></li>
+                    <li><a href="#">50+ Apis</a></li>
+                    <li><a href="">Intertional Leads</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Follow Us</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61559166032397"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/eren2024m?t=hAMgTKittyvEV6EmEhaiaw&s=08"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/devroy_2024?igsh=YmhoeHJ0MW9vajh2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/papan-roy-778a94292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 style="text-align: center; margin-top: 5px; font-family: 'Arial', sans-serif; color: #ffffff;  padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);">
+              Developed and Launched by Developerroy | All rights reserved
+            </h1>
+            
+          </footer>
+	 
+	</main>
+	<!-- partial -->
+	<script src='https://unpkg.com/phosphor-icons'></script>
+	<!-- <script src="./script.js"></script> -->
+	<script src="./options.js"></script>
+    <script src="./facebook.js"></script>
+<script>
+	// Function to copy table data to clipboard
+function copyTableToClipboard() {
+    const resultsContainer = document.getElementById('results');
+    const table = resultsContainer.querySelector('table');
+
+    if (!table) {
+        alert('No table available to copy.');
+        return;
+    }
+
+    // Extract table text content
+    let tableText = '';
+    const rows = table.querySelectorAll('tr');
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('th, td');
+        const rowText = Array.from(cells).map(cell => cell.textContent.trim()).join('\t');
+        tableText += rowText + '\n';
+    });
+
+    // Create a temporary textarea to copy the text content
+    const textarea = document.createElement('textarea');
+    textarea.value = tableText;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    alert('Table data copied to clipboard!');
+}
+
+
+// Function to download table data as a CSV file
+function downloadTableAsCSV() {
+    const resultsContainer = document.getElementById('results');
+    const table = resultsContainer.querySelector('table');
+
+    if (!table) {
+        alert('No table available to download.');
+        return;
+    }
+
+    // Extract table text content in CSV format
+    let csvContent = '';
+    const rows = table.querySelectorAll('tr');
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('th, td');
+        const rowContent = Array.from(cells).map(cell => `"${cell.textContent.trim().replace(/"/g, '""')}"`).join(',');
+        csvContent += rowContent + '\n';
+    });
+
+    // Create a temporary link to trigger the download
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'table_data.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Function to download table data as a CSV file
+function downloadTableAsCSV() {
+    const resultsContainer = document.getElementById('results');
+    const table = resultsContainer.querySelector('table');
+
+    if (!table) {
+        alert('No table available to download.');
+        return;
+    }
+
+    // Extract table text content in CSV format
+    let csvContent = '';
+    const rows = table.querySelectorAll('tr');
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('th, td');
+        const rowContent = Array.from(cells).map(cell => `"${cell.textContent.trim().replace(/"/g, '""')}"`).join(',');
+        csvContent += rowContent + '\n';
+    });
+
+    // Create a temporary link to trigger the download
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'table_data.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Function to download table data as a text file
+function downloadTableAsText() {
+    const resultsContainer = document.getElementById('results');
+    const table = resultsContainer.querySelector('table');
+
+    if (!table) {
+        alert('No table available to download.');
+        return;
+    }
+
+    // Extract table text content in plain text format
+    let textContent = '';
+    const rows = table.querySelectorAll('tr');
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('th, td');
+        const rowContent = Array.from(cells).map(cell => cell.textContent.trim()).join('\t');
+        textContent += rowContent + '\n';
+    });
+
+    // Create a temporary link to trigger the download
+    const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'table_data.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Showing result after 5 seconds 
+// Function to generate random leads
+function generateLeads() {
+    const numLeads = parseInt(document.getElementById('numLeads').value);
+    const randomLeads = [];
+
+    if (numLeads > jsonData.length) {
+        alert("Free accout are supposed to downlaod 100 leads at a same time . Lead Limit is 100 for free users");
+        return;
+    }
+
+    while (randomLeads.length < numLeads) {
+        const randomIndex = Math.floor(Math.random() * jsonData.length);
+        const randomLead = jsonData[randomIndex];
+        if (!randomLeads.includes(randomLead)) {
+            randomLeads.push(randomLead);
+        }
+    }
+
+    // Display results after a 5-second delay
+    setTimeout(() => {
+        displayResults(randomLeads);
+    }, 5000); // 5000 milliseconds = 5 seconds
+}
+
+
+
+// Loader 
+document.addEventListener("DOMContentLoaded", function() {
+             const loaderOverlay = document.getElementById('loader-overlay');
+             const loaderButton = document.getElementById('loader-button');
+             const loaderText = document.querySelector(".loader-text");
+             const messages = [
+                 "Searching online: 50 different API's",
+                 "Still searching, please wait...",
+                 "Almost there, found 21450 results",
+                 "Thanks for waiting"
+             ];
+             let index = 0;
+ 
+             setInterval(() => {
+                 loaderText.textContent = messages[index];
+                 index = (index + 1) % messages.length;
+             }, 3000);
+ 
+             loaderButton.addEventListener('click', function() {
+                 loaderOverlay.style.display = 'flex';
+                 setTimeout(() => {
+                     loaderOverlay.style.display = 'none';
+                 }, 6000);
+             });
+         });
+
+
+// Cant click button untill 3 fills 
+function validateForm() {
+        const numLeads = document.getElementById('numLeads').value;
+        const targetAudience = document.getElementById('targetAudience').value;
+        const keywords = document.getElementById('keywords').value;
+
+        // Enable or disable the button based on whether all fields are filled
+        const button = document.getElementById('loader-button');
+        button.disabled = !(numLeads && targetAudience && keywords);
+    }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function generateLeads() {
+    // Hide the form
+    const leadForm = document.getElementById('leadForm');
+    leadForm.style.display = 'none';
+
+    // Show the message
+    const message = document.getElementById('message');
+    message.style.display = 'block';
+
+    // Existing lead generation logic
+    const numLeads = parseInt(document.getElementById('numLeads').value);
+    const randomLeads = [];
+
+    if (numLeads > jsonData.length) {
+        alert("Not enough leads available.");
+        // Show the form again in case of an error (if you want to keep this behavior)
+        leadForm.style.display = 'block';
+        message.style.display = 'none'; // Hide message if form is shown again
+        return;
+    }
+
+    while (randomLeads.length < numLeads) {
+        const randomIndex = Math.floor(Math.random() * jsonData.length);
+        const randomLead = jsonData[randomIndex];
+        if (!randomLeads.includes(randomLead)) {
+            randomLeads.push(randomLead);
+        }
+    }
+
+    // Display results after a 5-second delay
+    setTimeout(() => {
+        displayResults(randomLeads);
+    }, 5000); // 5000 milliseconds = 5 seconds
+  }
+
+
+
+
+  // Reload the page when button is clicked to generate lead again 
+  function reloadPageMultipleTimes() {
+    let reloadCount = 0;
+    const maxReloads = 3;
+
+    function attemptReload() {
+        if (reloadCount < maxReloads) {
+            reloadCount++;
+            location.reload();
+        }
+    }
+
+    // Use setTimeout to delay the reloads
+    setTimeout(attemptReload, 100); // Initial reload after 100ms
+    setTimeout(attemptReload, 200); // Second reload after 200ms
+    setTimeout(attemptReload, 300); // Third reload after 300ms
+}
+</script>
+</body>
+
+</html>
+

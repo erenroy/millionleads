@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+<!-- Viewport Meta Tag for Responsive Design -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta Title -->
+<title>MillionLeads - Premium Lead Generation for Businesses, Freelancers, and Agencies</title>
+
+<!-- Meta Description -->
+<meta name="description" content="MillionLeads offers high-quality lead generation services for businesses, freelancers, and agencies. Get targeted leads and grow your business with our premium lead generation solutions.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="lead generation, business leads, freelancer leads, agency leads, lead generation services, targeted leads, premium leads">
+
+<!-- Meta Robots -->
+<meta name="robots" content="index, follow">
+<link rel="icon" href="fav.png" type="image/x-icon">
+<!-- Open Graph Meta Tags for Social Media -->
+<meta property="og:title" content="MillionLeads - Premium Lead Generation">
+<meta property="og:description" content="Discover top-quality lead generation services for businesses, freelancers, and agencies. Boost your growth with targeted leads from MillionLeads.">
+<meta property="og:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with your image URL -->
+<meta property="og:url" content="https://www.millionleads.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MillionLeads - Premium Lead Generation">
+<meta name="twitter:description" content="Find the best lead generation services for businesses, freelancers, and agencies. Increase your opportunities with MillionLeads.">
+<meta name="twitter:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with your image URL -->
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.millionleads.com">
+<title>MillionLeads - Best platofrm to provide leads for your Buisness </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="footer.css">
+
+</head>
+<style>
+	.main {
+		padding-top: 0rem;
+	}
+
+	.premium {
+    color: gold;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.locked {
+    padding-right: 20px;
+}
+
+.locked::after {
+    content: "\1F512"; /* Unicode for lock emoji */
+    position: absolute;
+    right: 0;
+    color: red;
+}
+
+.premium[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+
+
+.feature-container {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between lists */
+    gap: 20px; /* Space between the two lists */
+    margin: 20px 0; /* Space above and below the container */
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 45%; /* Ensure the lists fit side by side */
+}
+
+.feature-item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.feature-item:hover {
+    background-color: #e6f7ff;
+    transform: translateY(-5px);
+}
+
+.feature-item::before {
+    content: '•';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #1890ff;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.feature-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.feature-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.feature-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.feature-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+
+
+</style>
+<link rel="stylesheet" href="loader.css">
+<body>
+	<!-- partial:index.partial.html -->
+	<header class="header">
+		<div class="header-content responsive-wrapper">
+			<div class="header-logo">
+				<a href="index.html">
+					<div>
+						<!-- <img src="img/logo1.png" /> -->
+					</div>
+					<img src="img/logo6.png" />
+				</a>
+			</div>
+			<div class="header-navigation">
+				<nav class="header-navigation-links">
+					<a href="index.html"> Home </a>
+					<a href="about.html"> About Us </a>
+					<a href="features.html"> Features </a>
+					<a href="bloghow.html"> Blogs </a>
+					<a href="index.html"> Leads </a>
+					<a href="pricing.html"> Pricing </a>
+				</nav>
+				<div class="header-navigation-actions">
+					<a href="pricing.html" class="button">
+						<i class="ph-lightning-bold"></i>
+						<span>Upgrade now</span>
+					</a>
+					<a href="#" class="icon-button">
+						<i class="ph-gear-bold"></i>
+					</a>
+					<a href="#" class="icon-button">
+						<i class="ph-bell-bold"></i>
+					</a>
+					<a href="#" class="avatar">
+						<img src="https://uifaces.co/our-content/donated/gPZwCbdS.jpg" alt="" />
+					</a>
+				</div>
+			</div>
+			<a href="#" class="button">
+				<i class="ph-list-bold"></i>
+				<span>Menu</span>
+			</a>
+		</div>
+	</header>
+
+	
+	<div class="loader-overlay" id="loader-overlay">
+		<div class="loader-container">
+			<div class="loader">
+				<div class="dot dot1"></div>
+				<div class="dot dot2"></div>
+				<div class="dot dot3"></div>
+			</div>
+			<p class="loader-text" style="color: white;">Searching online: 50 different API's</p>
+		</div>
+	</div>
+	<main class="main">
+		<div class="responsive-wrapper">
+
+			<!-- <div class="horizontal-tabs">
+			<a href="#">My details</a>
+			<a href="#">Profile</a>
+			<a href="#">Password</a>
+			<a href="#">Team</a>
+			<a href="#">Plan</a>
+			<a href="#">Billing</a>
+			<a href="#">Email</a>
+			<a href="#">Notifications</a>
+			<a href="#" class="active">Integrations</a>
+			<a href="#">API</a>
+		</div> -->
+			<div class="content-header">
+				<div class="content-header-intro">
+					<h2>Find Your Ideal Customers – Generate Leads That Convert!</h2>
+					<p>Generate Millions of Leads Daily with Over 50 Customizable Web Data Fetching APIs! and millions
+						of active Data </p>
+				</div>
+				<div class="content-header-actions">
+					<a href="#" class="button">
+						<i class="ph-faders-bold"></i>
+						<span>Filters</span>
+					</a>
+					<a href="#" class="button">
+						<i class="ph-plus-bold"></i>
+						<span>Request Support</span>
+					</a>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content-panel">
+					<div class="vertical-tabs">
+						<a href="index.html" >Google Lead Search </a>
+						<a href="facebook.html" >Facebook Leads</a>
+						<a href="instagram.html" >Websearh Leads</a>
+						<a href="#" class="premium locked" title="Locked">LinkedIn Leads</a>
+						<a href="#" class="premium locked" title="Locked">Pinterest Leads</a>
+						<a href="#" class="premium locked" title="Locked">TikTok Leads</a>
+						<a href="#" class="premium locked" title="Locked">Snapchat Leads</a>
+						<a href="#" class="premium locked" title="Locked">Reddit Leads</a>	
+
+						<a  class="active">Our Service - MillionLead </a>
+						<ul style="line-height: 1.8; font-family: 'Helvetica Neue', Arial, sans-serif; margin: 2px; margin-top: 5px; padding: 20px; border: 2px solid #007BFF; border-radius: 10px; background-color: #F0F8FF; box-shadow: 0 4px 12px rgba(0,0,0,0.1); list-style-type: disc;">
+							<li><strong>Welcome to MillionLeads</strong>, your premier destination for generating high-quality leads that drive your business forward.</li>
+							<li>At MillionLeads, we harness the power of cutting-edge technology and innovative strategies to deliver unparalleled lead generation services.</li>
+							<li>Our dedicated team is committed to helping you connect with potential clients, expand your reach, and achieve your growth targets.</li>
+							<li>Whether you're a startup looking to build a customer base or an established company aiming to scale, MillionLeads provides the expertise and resources you need to succeed.</li>
+							<li>Join us and discover how we can transform your lead generation process, turning opportunities into results.</li>
+						</ul>
+						
+						
+					</div>
+				</div>
+				<div class="content-main">
+
+
+					<div class="card-grid" style="margin-top: 50px;">
+    
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/2.png" alt="Zeplin" /></span>
+									<h3>Google Search</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="zeplinCheckbox">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable to Generate Leads through goggle support</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/3.png"  alt="GitHub" /></span>
+									<h3>Web Apis</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="githubCheckbox">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Fetches data from more than 100 real world web apis </p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/1.png"  alt="Figma" /></span>
+									<h3>International Leads</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="figmaCheckbox">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable to get data from All over the world</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/4.png"  alt="Zapier" /></span>
+									<h3>Chatgpt Filter</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="zapierCheckbox">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable to get more control and precision over api search</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/5.png"  alt="Notion" /></span>
+									<h3>Website search</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" id="notionCheckbox">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Searches leads from millions of available websites online.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item = Expander </h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/6.png"  alt="Slack" /></span>
+									<h3>Expand search</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Expand to get thousands of results in seconds </p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item - Checker</h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/7.png"  alt="Slack" /></span>
+									<h3>Check Errors</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>leads before collecting </p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item - Enable faster </h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/8.png"  alt="Slack" /></span>
+									<h3>Fast </h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Enable faster and better response</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<style>
+								.card {
+									position: relative;
+									background: #fff;
+									border: 1px solid #ddd;
+									border-radius: 8px;
+									overflow: hidden;
+									box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+									transition: transform 0.3s, box-shadow 0.3s;
+								}
+						
+								/* Locked Overlay Styles */
+								.locked-overlay {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: rgba(0, 0, 0, 0.6);
+									color: #fff;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									justify-content: center;
+									border-radius: 8px;
+									z-index: 1;
+									text-align: center;
+								}
+						
+
+							</style>
+							<div class="locked-overlay">
+								<i class="fas fa-lock"></i>
+								<h4>Premium Item - Analyser</h4>
+								<p>Unlock to access this feature.</p>
+							</div>
+							<div class="card-header">
+								<div>
+									<span><img src="img/features/9.png"  alt="Slack" /></span>
+									<h3>Analyser</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Analyse all the leads collect from online.</p>
+
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						
+						<!-- <article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="https://assets.codepen.io/285131/google-chrome.svg" /></span>
+									<h3>Google Chrome</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Link your Google account to share bookmarks across your entire team.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="https://assets.codepen.io/285131/discord.svg" /></span>
+									<h3>Discord</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox" checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Keep in touch with your customers without leaving the app.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card-header">
+								<div>
+									<span><img src="https://assets.codepen.io/285131/google-drive.svg" /></span>
+									<h3>Google Drive</h3>
+								</div>
+								<label class="toggle">
+									<input type="checkbox">
+									<span></span>
+								</label>
+							</div>
+							<div class="card-body">
+								<p>Link your Google account to share files across your entire team.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#">View integration</a>
+							</div>
+						</article>  -->
+					</div>
+
+					<h1 style="text-align: center; margin-top: 40px; font-size: 1.6rem;">Customize your data fetching
+						thgrough our api </h1>
+                        <div class="feature-container">
+                            <ul class="feature-list">
+                                <li class="feature-item">Collaboration between designers and developers.</li>
+                                <li class="feature-item">Link pull requests and automate workflows.</li>
+                                <li class="feature-item">Embed file previews in projects.</li>
+                                <li class="feature-item">Build custom automations and integrations with apps.</li>
+                                <li class="feature-item">Embed notion pages and notes in projects.</li>
+                                <li class="feature-item">Collaboration between designers and developers.</li>
+                                <li class="feature-item">Link pull requests and automate workflows.</li>
+                               
+                            </ul>
+                            <ul class="feature-list">
+                                <li class="feature-item">Collaboration between designers and developers.</li>
+                                <li class="feature-item">Link pull requests and automate workflows.</li>
+                                <li class="feature-item">Embed file previews in projects.</li>
+                                <li class="feature-item">Build custom automations and integrations with apps.</li>
+                                <li class="feature-item">Embed notion pages and notes in projects.</li>
+                                <li class="feature-item">Collaboration between designers and developers.</li>
+                                <li class="feature-item">Link pull requests and automate workflows.</li>
+                               
+                            </ul>
+                        </div>
+                    
+
+				</div>
+			</div>
+		</div>
+        <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="footer-col">
+                  <h4>MillionLeads</h4>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="features.html">Our Features</a></li>
+                    <li><a href="index.html">Generate Leads</a></li>
+                    <li><a href="pricing.html">Pricing and Plans</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Our Contact Info </h4>
+                  <ul>
+                    <li><a href="#">developerroyhub@gmail.com</a></li>
+                    <li><a href="https://www.developerroy.online/">Website - developerroy.online</a></li>
+                    <li><a href="#">millionLeads</a></li>
+                    <li><a href="#">Order Services</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Our Services</h4>
+                  <ul>
+                    <li><a href="index.html">Google Search</a></li>
+                    <li><a href="facebook.html">Facebook Search</a></li>
+                    <li><a href="instagram.html">Website Search</a></li>
+                    <li><a href="#">50+ Apis</a></li>
+                    <li><a href="">Intertional Leads</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Follow Us</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61559166032397"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/eren2024m?t=hAMgTKittyvEV6EmEhaiaw&s=08"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/devroy_2024?igsh=YmhoeHJ0MW9vajh2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/papan-roy-778a94292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 style="text-align: center; margin-top: 5px; font-family: 'Arial', sans-serif; color: #ffffff;  padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);">
+              Developed and Launched by Developerroy | All rights reserved
+            </h1>
+            
+          </footer>
+	</main>
+	<!-- partial -->
+	<script src='https://unpkg.com/phosphor-icons'></script>
+
+</body>
+
+</html>
+
